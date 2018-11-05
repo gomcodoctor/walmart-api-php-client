@@ -291,6 +291,9 @@ class Product extends AbstractEntity implements ProductInterface
      */
     private $attributes;
 
+    /** @var bool */
+    protected $twoDayShippingEligible;
+
     /**
      * @return int
      */
@@ -1123,4 +1126,21 @@ class Product extends AbstractEntity implements ProductInterface
     {
         $this->attributes = $attributes;
     }
+
+    /**
+     * @return bool
+     */
+    public function isTwoDayShippingEligible()
+    {
+        return $this->twoDayShippingEligible;
+    }
+
+    /**
+     * @param bool $twoDayShippingEligible
+     */
+    public function setTwoDayShippingEligible($twoDayShippingEligible)
+    {
+        $this->twoDayShippingEligible = $twoDayShippingEligible;
+    }
+
 }
